@@ -32,8 +32,6 @@ function Board({ xIsNext, squares, onPlay }) {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
-  let squareCounter = 0;
-
   return (
     <>
       <div className="status">{status}</div>
@@ -42,7 +40,7 @@ function Board({ xIsNext, squares, onPlay }) {
         <div key={i} className="board-row">
           {Array.from({ length:3 }).map((_, j) => {
             const index = i*3+j;
-            return ( <Square key={j} value={squares[index]} onSquareClick={() => handleClick(index)} />);
+            return ( <Square key={index} value={squares[index]} onSquareClick={() => handleClick(index)} />);
           })}
         </div>
       ))}
@@ -80,8 +78,6 @@ export default function Game() {
       </li>
     ); 
   });
-
-  console.debug(currentSquares);
 
   return (
     <div className="game">

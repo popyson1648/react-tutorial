@@ -27,7 +27,7 @@ historyに新たな局面の履歴を記録する。
 jumpTo(nextMove):
 局面ジャンプに伴う現在の手番を設定。
 
-# Board Compoment 
+# Board Component 
 
 配列をコピーして、コピー後の新たな配列に変更（OかXを書き込み）を加える
 変更後、配列をonPlay関数に渡す
